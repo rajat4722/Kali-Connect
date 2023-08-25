@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Linux(Hacker OS)</string>
+    <string name="todo" />
+    <string name="new_application" />
+    <string name="take_a_lesson">Take a Lesson</string>
+    <string name="learn_kali_linux">Learn Kali Linux</string>
+    <string name="a_free_place_to_learn_kali_linux_tools_amp_command"><![CDATA[a free place to learn kali linux tools & command]]></string>
+    <string name="navigation_open">Open Navigation drawer</string>
+    <string name="navigation_close">Close Navigation drawer</string>
+    <string name="about_developer">About Developer</string>
+    <string name="this_app_is_all_about_to_give_you_a_brief_knowledge_of_linux_system_and_its_architecture_for_better_pratice_of_your_skills_to_do_things_through_which_you_can_use_to_develop_your_skills">This app is all about to give you a brief knowledge of linux system and \n its architecture for better pratice of your skills to do things through which you can use to develop your skills.</string>
+    <string name="kali_linux_hacker_os">Kali Linux (hacker OS)</string>
+    <string name="hello_my_name_is_rajat_shukla_n_and_i_m_a_information_technology_student_n_if_you_like_it_then_share_it_with_your_friends">Hello,my name is rajat shukla.\n And I\'m a Information Technology Student.\n If you like it then share it with your friends.</string>
+    <string name="connect_with_me">Connect with me</string>
+    <string name="version_1_1_0">Version 1.1.0</string>
+    <string name="made_with_love_in_indian">Made with love in indian</string>
+    <string name="your_1_app_for_all_your_kali_linux_tools_and_commands_n_rajat_shukla">Your #1 app for all your kali linux tools and commands \n -Rajat Shukla</string>
+    <string name="made_with_love_in_india">made with love in india</string>
+    <string name="linux_commands_nview_all">Linux Commands\nView All</string>
+    <string name="request_a_topic">Request a topic</string>
+</resources>

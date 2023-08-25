@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".MainActivity"
+    android:id="@+id/drawerlayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/skyblue"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:title="Dashboard"
+                app:titleMarginStart="10dp"
+                app:titleTextColor="@color/white"
+                tools:ignore="MissingConstraints" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_pstr"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/rrectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                tools:ignore="MissingConstraints,NotSibling">
+
+                <ImageView
+                    android:id="@+id/top_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/lnxmn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top_pstr"
+                tools:ignore="MissingConstraints">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/lesson_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/caveat"
+                        android:text="Take a lesson   ->"
+                        android:textColor="#8F8A8A"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/top_pstr" />
+
+
+                    <ImageButton
+                        android:id="@+id/kali_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/lesson_title"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:elevation="80dp"
+                        android:minHeight="48dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_continuenn"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:focusable="true" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <ViewFlipper
+                android:id="@+id/horizon_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateFirstView="true"
+                android:autoStart="true"
+                android:flipInterval="4000"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/explore_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/continue_button"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/meimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardBackgroundColor="#DCFCFD"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imgs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="18dp"
+                            android:src="@drawable/frrr" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/kliimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardBackgroundColor="#DCFCFD"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/klll" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <!--   <ImageView
+                     android:id="@+id/horizon_me_pstr"
+                     android:layout_width="match_parent"
+                     android:layout_height="130dp"
+                     android:layout_gravity="center"
+                     android:scaleType="centerCrop"
+                     android:padding="10dp"
+                     android:background="@drawable/new_me"
+                     tools:ignore="ContentDescription" />
+
+                 <ImageView
+                     android:id="@+id/horizon_th_pstr"
+                     android:layout_width="match_parent"
+                     android:layout_height="130dp"
+                     android:layout_gravity="center"
+                     android:padding="10dp"
+                     android:background="@drawable/new_me"
+                     tools:ignore="ContentDescription" />  -->
+
+            </ViewFlipper>
+
+            <!--     <HorizontalScrollView
+             android:id="@+id/horizon_view"
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:fillViewport="true"
+             android:layout_weight="1"
+             android:scrollbars="none"
+
+             app:layout_constraintTop_toBottomOf="@+id/continue_button"
+             tools:ignore="MissingConstraints">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:gravity="center_vertical"
+                 android:padding="5dp">
+
+                 <ImageView
+                     android:id="@+id/horizon_me_pstr"
+                     android:layout_width="485dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:adjustViewBounds="true"
+                     android:padding="10dp"
+                     android:src="@drawable/me_pstr" />
+
+                 <ImageView
+                     android:id="@+id/horizon_th_pstr"
+                     android:layout_width="485dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:adjustViewBounds="true"
+                     android:padding="10dp"
+                     android:src="@drawable/kali_thoght" />
+
+             </LinearLayout>
+
+         </HorizontalScrollView>  -->
+
+            <TextView
+                android:id="@+id/explore_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/expletus_sans"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:text="Explore all"
+                android:textColor="#CCCCCC"
+                android:textSize="17sp"
+                android:layout_margin="10dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizon_view" />
+
+            <LinearLayout
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/explore_title"
+                tools:ignore="MissingConstraints">
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/linux_cmd"
+                    android:layout_width="200dp"
+                    android:layout_height="160dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:id="@+id/card_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/infinity" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/caveat"
+                        android:gravity="center"
+                        android:text="@string/linux_commands_nview_all"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/card_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/explore_title"
+                tools:ignore="MissingConstraints">
+
+                <!--       <soup.neumorphism.NeumorphCardView
+                   android:id="@+id/linux_tool"
+                   android:layout_width="180dp"
+                   android:layout_height="140dp"
+                   android:gravity="right"
+                   android:clickable="true">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp">
+
+                       <ImageView
+                           android:id="@+id/card_img2"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_gravity="center"
+                           android:src="@drawable/infinity" />
+                   </LinearLayout>
+
+                   <TextView
+                       android:id="@+id/card_title2"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:fontFamily="@font/caveat"
+                      android:gravity="center"
+                       android:text="Linux Tools\n View All"
+                       android:textColor="@color/black"
+                       android:textSize="22sp"
+                       android:textStyle="bold"
+                       android:layout_marginTop="15dp"/>
+
+                  </soup.neumorphism.NeumorphCardView>
+                  -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/card"
+                tools:ignore="MissingConstraints">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/rqst_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_feather_pen" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/original_surfer"
+                        android:gravity="center|left"
+                        android:paddingLeft="70dp"
+                        android:text="@string/request_a_topic"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/rate_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_star" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/original_surfer"
+                        android:gravity="center|left"
+                        android:paddingLeft="70dp"
+                        android:text="Rate Us"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/bottom_thght"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/caveat"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/your_1_app_for_all_your_kali_linux_tools_and_commands_n_rajat_shukla"
+                android:textColor="@color/grey"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottom_card"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/bottom_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottom_thght">
+
+
+                <TextView
+                    android:id="@+id/policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/caveat"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText,MissingConstraints" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationview"
+        android:background="#efefef"
+        app:headerLayout="@layout/headerfile"
+        app:menu="@menu/drawer_menu"
+        app:itemTextColor="@color/grey"
+        app:itemIconTint="@color/black"
+        android:clickable="true"
+        app:insetForeground="@color/white"
+        android:scrollbars="none"
+        android:layout_gravity="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nav_versn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/caveat"
+                android:scrollHorizontally="true"
+                android:layout_gravity="bottom|center"
+                android:gravity="bottom|center_horizontal"
+                android:text="Version 1.1.1 \nMade with love in India"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

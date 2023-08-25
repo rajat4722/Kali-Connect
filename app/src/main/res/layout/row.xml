@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soup.neumorphism.NeumorphCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:circularflow_radiusInDP="3dp"
+    app:neumorph_shapeType="basin"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/pinpng_1" />
+
+        <TextView
+            android:id="@+id/titleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_toEndOf="@id/image1"
+            android:layout_toRightOf="@+id/image1"
+            android:fontFamily="@font/caveat"
+            android:text="@string/new_application"
+            android:textColor="#AFADAD"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+
+
+
+    </RelativeLayout>
+
+</soup.neumorphism.NeumorphCardView>

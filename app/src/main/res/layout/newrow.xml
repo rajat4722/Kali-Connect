@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soup.neumorphism.NeumorphCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+
+    app:neumorph_shapeType="pressed">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_txtvw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/caveat"
+            android:textColor="#700172AF"/>
+
+        <TextView
+            android:id="@+id/main_txtvw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_txtvw"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/caveat"
+            android:textColor="#DC000000"/>
+
+        <TextView
+            android:id="@+id/desc_txtvw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_txtvw"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/caveat"
+            android:text=""
+            android:textColor="#A3A2A2"
+            android:textSize="20sp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</soup.neumorphism.NeumorphCardView>
